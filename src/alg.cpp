@@ -4,6 +4,7 @@
 #include  <locale>
 #include  <cstdlib>
 #include <algorithm>
+#include <vector>
 #include  "tree.h"
 
 PMTreeNode::~PMTreeNode() {
@@ -36,7 +37,9 @@ void PMTree::buildTree(PMTreeNode* node, const std::vector<char>& remaining) {
   }
 }
 
-void collectPermutations(const PMTreeNode* node, std::vector<char>& current, std::vector<std::vector<char>>& result) {
+void collectPermutations(const PMTreeNode* node,
+                        std::vector<char>& current,
+                        std::vector<std::vector<char>>& result) {
   if (node->value != '\0') {
     current.push_back(node->value);
   }
