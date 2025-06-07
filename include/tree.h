@@ -21,7 +21,7 @@ class PMTree {
   explicit PMTree(const std::vector<char>& elements);
   ~PMTree();
 
-private:
+ private:
   void buildTree(PMTreeNode* node, const std::vector<char>& remaining);
 };
 
